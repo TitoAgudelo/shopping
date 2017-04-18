@@ -1,0 +1,49 @@
+header {
+	section {
+		@include flex-box-center;
+		@include theme-background;
+		background-size: 100% 150%;
+		height: 350px;
+
+		.logo {
+			@include link-with-logo;
+			position: absolute;
+    	top: $vertical-rythm-spacing-text;
+    	left: 80px;
+    	margin: 0; 
+		}
+
+		.title {
+			color: $c-secondary;
+			font-size: $font-size-headline-primary-large;
+			font-weight: $font-weight-regular;
+		}
+  }
+
+  nav {
+  	ul {
+  		@include flex-box-wrap;
+  		list-style: none;
+  		padding: 0 80px;
+  		margin: $vertical-rythm-spacing-component 0; 
+
+  		li {
+
+  			&:first-child {
+					&:after {
+	  				content: '>>';
+				    display: inline-block;
+				    height: 20px;
+				    width: 20px;
+				    margin: 0 5px;
+				    font-size: 14px;
+	  			}
+  			}
+
+  			a {
+  				color: $c-primary;
+  			}
+  		}
+  	}
+  }
+}

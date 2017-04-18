@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  min-height: 100%;
+  width: 100vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+body,
+html {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1180px;
+  box-sizing: border-box;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.is-visually-hidden.is-focusable:focus {
+  position: static;
+  clip: auto;
+}
+
+header section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background-image: url("themes/netcentric/title.large.2x.png"), linear-gradient(-22deg, #7b64e2 30%, #311b92 100%);
+  background-size: 100% 150%;
+  height: 350px;
+}
+
+header section .logo {
+  display: inline-block;
+  color: transparent;
+  background-image: url("themes/netcentric/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  height: 38px;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+  margin: 0;
+}
+
+header section .logo:link, header section .logo:visited {
+  color: transparent;
+}
+
+header section .title {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 300;
+}
+
+header nav ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0 80px;
+  margin: 30px 0;
+}
+
+header nav ul li:first-child:after {
+  content: '>>';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+header nav ul li a {
+  color: #311b92;
+}
+
+#section-breadcrumbs {
+  list-style: none;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#section-breadcrumbs li {
+  border: dashed 1px #cccccc;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 49%;
+}
+
+#section-breadcrumbs li .breadcrumbs-title h3 {
+  font-weight: 400;
+  margin: 0;
+}
+
+#section-breadcrumbs li .breadcrumbs-title p {
+  margin: 10px 0;
+  min-height: 75px;
+}
+
+#section-breadcrumbs li .breadcrumbs-footer {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#section-breadcrumbs li .breadcrumbs-footer button {
+  box-shadow: none;
+  background-color: transparent;
+  transition: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  color: #311b92;
+  font-size: 16px;
+}
+
+#section-breadcrumbs li .breadcrumbs-footer button:hover {
+  cursor: pointer;
+}
+
+#section-breadcrumbs li .breadcrumbs-footer button:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+#section-breadcrumbs li .breadcrumbs-footer p {
+  font-weight: 400;
+  margin: 0;
+}
+
+.main-section {
+  padding: 0 80px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#section-shop {
+  max-width: 675px;
+}
+
+#section-shop .shop-title {
+  color: #311b92;
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+}
+
+#section-shoppingcart {
+  background-color: #f7f7f7;
+  padding: 20px;
+  max-width: 575px;
+}
+
+#section-shoppingcart .shopping-title {
+  color: #311b92;
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+}
+
+#section-shoppingcart #shoppingcart-form {
+  padding: 10px;
+}
+
+#section-shoppingcart #shoppingcart-form table {
+  border-collapse: collapse;
+  position: relative;
+  width: 100%;
+}
+
+#section-shoppingcart #shoppingcart-form table thead:after {
+  border-top: dashed 1px #333333;
+  content: ' ';
+  display: inline-block;
+  height: 1px;
+  position: absolute;
+  width: 100%;
+}
+
+#section-shoppingcart #shoppingcart-form table thead tr th {
+  color: #311b92;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr {
+  border-bottom: 1px solid #cccccc;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td {
+  vertical-align: top;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.info {
+  vertical-align: top;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.info h3 {
+  font-weight: 400;
+  margin: 0;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.info p {
+  margin: 10px 0;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.info .remove button {
+  box-shadow: none;
+  background-color: transparent;
+  transition: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  color: #311b92;
+  font-size: 16px;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.info .remove button:hover {
+  cursor: pointer;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.price p {
+  font-weight: 400;
+  margin: 0;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.items input {
+  height: 25px;
+  width: 35px;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.items button {
+  box-shadow: none;
+  background-color: transparent;
+  transition: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  background: #311b92;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.items button:hover {
+  cursor: pointer;
+}
+
+#section-shoppingcart #shoppingcart-form table tbody tr td.items button:hover, #section-shoppingcart #shoppingcart-form table tbody tr td.items button:focus {
+  background: #7b64e2;
+}
+
+#section-shoppingcart #shoppingcart-form table tfoot ol {
+  border-top: 1px solid #cccccc;
+  list-style: none;
+  padding: 10px 0 0;
+}
+
+#section-shoppingcart #shoppingcart-form table tfoot ol .total {
+  border-top: 1px solid #cccccc;
+  margin-top: 10px;
+  padding-top: 16px;
+}
+
+#section-shoppingcart #shoppingcart-form table tfoot ol .total output {
+  color: #311b92;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+#section-shoppingcart #shoppingcart-form footer {
+  border-top: 1px dashed #cccccc;
+}
+
+#section-shoppingcart #shoppingcart-form footer .action-wrapper {
+  text-align: right;
+}
+
+#section-shoppingcart #shoppingcart-form footer .action-wrapper a {
+  color: #311b92;
+}
+
+#section-shoppingcart #shoppingcart-form footer .action-wrapper button {
+  box-shadow: none;
+  background-color: transparent;
+  transition: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  background: #311b92;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+#section-shoppingcart #shoppingcart-form footer .action-wrapper button:hover {
+  cursor: pointer;
+}
+
+#section-shoppingcart #shoppingcart-form footer .action-wrapper button:hover, #section-shoppingcart #shoppingcart-form footer .action-wrapper button:focus {
+  background: #7b64e2;
+}
+
+footer.footer {
+  background-image: url("themes/netcentric/title.large.2x.png"), linear-gradient(-22deg, #7b64e2 30%, #311b92 100%);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #fff;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+footer.footer a {
+  display: inline-block;
+  color: transparent;
+  background-image: url("themes/netcentric/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  height: 38px;
+  margin-left: 90px;
+}
+
+footer.footer a:link, footer.footer a:visited {
+  color: transparent;
+}

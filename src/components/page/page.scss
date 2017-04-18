@@ -1,0 +1,5 @@
+.main-section {
+	padding: 0 80px;
+	@include flex-justify-between;
+	margin-bottom: $vertical-rythm-spacing-component;
+}

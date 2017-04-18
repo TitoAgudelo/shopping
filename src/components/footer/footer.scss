@@ -1,0 +1,12 @@
+footer.footer {
+	@include theme-background;
+	@include flex-vertical-center;
+	color: $c-secondary;
+	padding: $vertical-rythm-spacing-text 0;
+	font-weight: $font-weight-bolder;
+
+	a {
+		@include link-with-logo;
+		margin-left: 90px;
+	}
+}

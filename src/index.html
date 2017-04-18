@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Netcentric - Basket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <section>
+      <a class="logo" href="http://netcentric.biz">
+      Link to Netcentric Website
+      </a>
+      <h1 class="title">
+        Netcentric. Expect sailing trips as well!
+      </h1>
+    </section>
+    <nav>
+      <ul class="navbar">
+        <li><a href="http://netcentric.biz">Home</a></li>
+        <li>Shopping for the annual sailing trip</li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-section">
+    <article id="section-shop">
+      <h2 class="shop-title">The Shop</h2>
+      <p>Ahoy landman! Pick what you need for the big trip. You gonna be out there some days, so better leave prepared.</p>
+      <p><strong>Please note: All prices are without <abbr title="Value Added Tax">VAT</abbr>!</strong></p>
+      <ol id="section-breadcrumbs">
+        <li class="breadcrumbs">
+          <div class="breadcrumbs-title">
+            <h3>Towel</h3>
+            <p>Sunny days and warm weather - you clearly need it after a refreshing jump into the cool sea.</p>
+          </div>
+          <footer class="breadcrumbs-footer">
+            <button data-shop-listing='{"name": "Towel", "description": "Sunny days and warm weather - you clearly need it after a refreshing jump into the cool sea.", "price": 10.00}'>Add to cart</button>
+            <p>&euro;10</p>
+          </footer>
+        </li>
+        <li class="breadcrumbs">
+          <div class="breadcrumbs-title">
+            <h3>Enlightening book</h3>
+            <p>There&rsquo;s no rush out there. Take your time for a good read.</p>
+          </div>
+          <footer class="breadcrumbs-footer">
+            <button data-shop-listing='{"name": "Enlightening book", "description": "There&rsquo;s no rush out there. Take your time for a good read.", "price": 5.99}'>Add to cart</button>
+            <p>&euro;5.99</p>
+          </footer>
+        </li>
+        <li class="breadcrumbs">
+          <div class="breadcrumbs-title">
+            <h3>Waterproof camera</h3>
+            <p>Below the sea&rsquo;s surface, a hidden world. Don't miss out to bring those memories back home.</p>
+          </div>
+          <footer class="breadcrumbs-footer">
+            <button data-shop-listing='{"name": "Waterproof camera", "description": "Below the sea&rsquo;s surface, a hidden world. Do not miss out to bring those memories back home.", "price": 49.99}'>Add to cart</button>
+            <p>&euro;49.99</p>
+          </footer>
+        </li>
+        <li class="breadcrumbs">
+          <div class="breadcrumbs-title">
+            <h3>Pinwheel</h3>
+            <p>Wondering what to do when there's only a light breeze? Back to your childhood!</p>
+          </div>
+          <footer class="breadcrumbs-footer">
+            <button data-shop-listing='{"name": "Pinwheel", "description": "Wondering what to do with only a light breeze? Back to your childhood!", "price": 2.50}'>Add to cart</button>
+            <p>&euro;2.50</p>
+          </footer>
+        </li>
+      </ol>
+    </article>
+    <article id="section-shoppingcart">
+      <h2 class="shopping-title">Your boat's shopping cart</h2>
+      <p>&hellip;is empty.</p>
+      <form id="shoppingcart-form">
+        <table>
+          <thead>
+            <tr>
+              <th align="left">Product</th>
+              <th align="right">Price</th>
+              <th align="right">Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="info" width="60%">
+                <h3>Enlightening book</h3>
+                <p>There’s no rush out there. Take your time for a good read.</p>
+                <div class="remove">
+                  <button>Remove</button>
+                </div>
+              </td>
+              <td align="right" class="price" width="10%">
+                <output><p>&euro;5.99</p></output>
+              </td>
+              <td align="right" class="items" width="30%">
+                <input type="number" min="1" value="1">
+                <span>
+                <button type="button" aria-label="decrease">
+                -
+                </button>
+                <button type="button" aria-label="step up">
+                +
+                </button>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="info" width="60%">
+                <h3>Waterproof camera</h3>
+                <p>Below the sea’s surface, a hidden world. Don't miss out to bring those memories back home.</p>
+                <div class="remove">
+                  <button>Remove</button>
+                </div>
+              </td>
+              <td align="right" class="price" width="10%">
+                <output><p>&euro;49.99</p></output>
+              </td>
+              <td align="right" class="items" width="30%">
+                <input type="number" min="1" value="1">
+                <span>
+                <button type="button" aria-label="decrease">
+                -
+                </button>
+                <button type="button" aria-label="step up">
+                +
+                </button>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" align="right">
+                <ol>
+                  <li class="price">
+                    <label>Price before <abbr title="Value Added Tax">VAT</abbr>:</label>
+                    <output></output>
+                  </li>
+                  <li class="taxes">
+                    <label><abbr title="Value Added Tax">VAT</abbr> @ <strong></strong>%:</label>
+                    <output></output>
+                  </li>
+                  <li class="total">
+                    <label>Total to be paid:</label>
+                    <output>&euro;74.36</output>
+                  </li>
+                </ol>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        <footer>
+          <p>
+            <em>Free shipping! We will fly your order to your boat with one of our Netcentric drones the moment you click that checkout button!</em>
+          </p>
+          <div class="action-wrapper">
+            <a href="#">Continue shopping</a> <em>or</em> <button type="submit" form="shoppingcart-form">Proceed to Checkout</button>
+          </div>
+        </footer>
+      </form>
+    </article>
+  </main>
+  <footer class="footer">
+    <a href="http://netcentric.biz">
+    Link to Netcentric Website
+    </a>
+    &copy; 2017
+  </footer>
+  <script src="libs-polyfills/jquery-3.2.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

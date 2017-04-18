@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netcentric. Expect excellence - Frontend Developer Test</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    em {
+      background: yellow;
+      padding-left: 2px;
+      padding-right: 5px;
+    }
+
+    main {
+      max-width: 767px;
+      margin: 0 auto;
+    }
+
+    main h2, main h3 {
+      color: #311b92;
+      font-weight: 300;
+    }
+
+    main h2 {
+      font-size: 30px;
+      border-top: 1px dashed grey;
+      padding-top: 16px;
+    }
+
+    main h3 {
+      font-size: 20px;
+    }
+
+    a:link, a:visited {
+      color: #311b92;
+    }
+
+    ol p, ul p {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    li {
+      line-height: 2;
+    }
+
+    code {
+      background: #eee;
+    }
+
+    .pageHeader, .pageFooter {
+      background: #512da8;
+      background: linear-gradient(-22deg, #673ab7 30%, #311b92 100%);
+    }
+
+    .pageFooter {
+      padding-bottom: 30px;
+    }
+
+    .pageHeader {
+      padding-bottom: 30px;
+      color: white;
+    }
+
+    .pageHeadline {
+      margin-top: 95px;
+      margin-bottom: 0;
+      font-size: 40px;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .pageHeadline .subline {
+      font-size: smaller;
+      border-top: 1px dashed white;
+      max-width: 767px;
+      margin-top: 30px;
+      padding-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pageSubHeadline {
+      color: white;
+    }
+
+    .homepageLink {
+      margin-left: 30px;
+      margin-top: 30px;
+      display: inline-block;
+      color: transparent;
+      background-image: url('src/themes/netcentric/logo.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      font-size: 20px;
+      height: 36px;
+    }
+
+    .homepageLink:link,
+    .homepageLink:visited {
+      color: transparent;
+    }
+
+    .confidentialMessage {
+      font-weight: 400;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 767px;
+    }
+  </style>
+</head>
+<body>
+  <header class="pageHeader">
+    <a class="homepageLink" href="http://netcentric.biz">Link to Netcentric Homepage</a>
+    <h1 class="pageHeadline">Netcentric. Expect excellence <div class="subline"> Frontend Developer Test</div></h1>
+  </header>
+  <main>
+      <p>THIS IS A CONFIDENTIAL EXERCISE, WHICH IS PART OF A RECRUITING PROCESS AND AS SUCH, IT SHOULD NOT BE SHARED, DISTRIBUTED OR EXPOSED ANYWHERE. DOING SO, WILL AUTOMATICALLY DISQUALIFY YOU FROM THE PROCESS.</p>
+<p>IF YOU HAVE ANY QUESTIONS, PLEASE WRITE US AN EMAIL USING THE FORM AT <a href="https://www.netcentric.biz/contact.html">netcentric.biz/contact.html</a>.</p>
+<p><strong>This is an important document for your future career. Please read <em>carefully</em> through <em>all</em> of the following instructions before you begin with the implementation.</strong></p>
+<p>This test is targeted at two different levels: Junior Frontend Developers and Frontend Heroes. Reading through this document + setup should take ~20min. <em>Please choose your own level.</em></p>
+<p>Also, please keep in mind that your handed in code will form the basis of the next steps in the formal recruiting process. It is therefore only in your own best interest to be able to explain every code decision you took.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#whom-were-looking-for">Whom we're looking for</a></li>
+<li>
+<p><a href="#setup-your-system">Setup your system</a></p>
+<ul>
+<li><a href="#nodejs-v6x">node.js v6.x</a></li>
+<li><a href="#install-npm-packages-and-run-build">Install NPM packages and run build</a></li>
+<li><a href="#ide-configuration">IDE configuration</a></li>
+<li><a href="#helper-tools">Helper tools</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#what-we-expect-from-your-code">What we expect from your code</a></p>
+<ul>
+<li><a href="#browsers-it-should-work-in-and-display-correctly">Browsers it should work in and display correctly</a></li>
+<li><a href="#where-should-i-place-my-files">Where should I place my files?</a></li>
+<li><a href="#coding-guidelines">Coding guidelines</a></li>
+<li><a href="#can-i-use-additional-npm-packages">Can I use additional NPM packages?</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#requirements">Requirements</a></p>
+<ul>
+<li><a href="#junior-developers-and-frontend-heroes">Junior Developers and Frontend Heroes</a></li>
+<li><a href="#only-junior-developers">Only Junior Developers</a></li>
+<li><a href="#only-frontend-heroes">Only Frontend Heroes</a></li>
+</ul>
+</li>
+<li><a href="#what-are-you-expected-to-hand-in">What are you expected to hand in?</a></li>
+</ul>
+<h2 id="whom-were-looking-for">Whom we're looking for</h2>
+<p>At Netcentric we develop websites for worldwide active clients with a broad range of necessities. Which is why we expect our developers to feel at home in all areas of modern Frontend development. Expressive markup, crossbrowser/crossdevice working CSS styles and lean JavaScript code should therefore be on your high priority list.</p>
+<h2 id="setup-your-system">Setup your system</h2>
+<h3 id="nodejs-v6x">node.js v6.x</h3>
+<p>You will need <a href="https://nodejs.org">node.js</a> v6.x. In case you want to manage several node versions on your machine, we recommend <a href="https://github.com/creationix/nvm">nvm</a> for Mac/*nix and <a href="https://github.com/marcelklehr/nodist">nodist</a> for Windows.</p>
+<h3 id="install-npm-packages-and-run-build">Install NPM packages and run build</h3>
+<p>Once you have node.js installed, open up your OS's Terminal/Bash application,  change into the root folder of the test (where the file <code>package.json</code> is located) and run <code>npm install</code>.</p>
+<p>After all NPM packages installed successfully, the build process will automatically trigger (you can do that manually by running <code>npm run build</code>). It will execute <a href="http://stackoverflow.com/questions/8503559/what-is-linting#8503586">linters</a> for JavaScript, CSS and HTML and also pre-process SASS files and convert them to CSS. Please note that you will need a <em>working Internet connection</em> to run the HTML linter.</p>
+<p>At this point you should get no errors which means that all linters successfully passed your code.</p>
+<h3 id="ide-configuration">IDE configuration</h3>
+<p>Please configure your IDE to use the <a href="http://editorconfig.org/#download"><code>.editorconfig</code></a>, <a href="https://github.com/stylelint/stylelint/blob/master/docs/user-guide/complementary-tools.md#editor-plugins"><code>.stylelintrc</code></a> and <a href="http://eslint.org/docs/user-guide/integrations#editors"><code>.eslintrc</code></a> files you find in the project's root folder. This way you will see you linting errors directly in your IDE.</p>
+<h3 id="helper-tools">Helper tools</h3>
+<p>We've got NPM scripts prepared that can help you while you are developing.</p>
+<p>Open up for each of the following commands a tab (or session) in your OS's Terminal/Bash application and run them from within the root folder of this test (where the <code>package.json</code> file is located).</p>
+<ul>
+<li><code>npm run watch:lint</code> - starts the linters in watch mode; meaning on every file change the linters will run and give you instant feedback if there's something to improve</li>
+<li>
+<p><code>npm run watch:css</code></p>
+<ul>
+<li>every fill change on any <code>*.scss</code> file will trigger the SASS pre-processor and generate a CSS file</li>
+<li>afterwards all CSS files be passed to <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> which removes the necessity for you to care about browser vendor prefixes (you are welcome!)</li>
+</ul>
+</li>
+</ul>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>If you experience problems during the setup please <em>STOP</em> and send a message to <a href="mailto:info@netcentric.biz">Netcentric Human Resources</a> describing your steps and pasting the error log of your Terminal/Bash application.</p>
+<h2 id="what-we-expect-from-your-code">What we expect from your code</h2>
+<h3 id="browsers-it-should-work-in-and-display-correctly">Browsers it should work in and display correctly</h3>
+<ul>
+<li>Latest Chrome</li>
+<li>Latest Firefox</li>
+</ul>
+<h3 id="where-should-i-place-my-files">Where should I place my files?</h3>
+<p>We've got an initial folder and file structure in <code>src</code> prepared for you:</p>
+<ul>
+<li><code>index.html</code> - HTML file with prepared markup and included assets.</li>
+<li><code>main.js</code> - this should be your main JS file which coordinates other JS modules</li>
+<li><code>styles.scss</code> - this file will be taken as the entry point once you run any css related tasks like <code>npm run css</code> or <code>npm run watch:css</code></li>
+<li>
+<p><code>themes/netcentric</code></p>
+<ul>
+<li><code>netcentric.scss</code> - here you can find predefined mixins, variables and classes that will help you to implement the required design as fast as possible. <em>Please read carefully through this file so you don't have to reinvent the wheel.</em></li>
+</ul>
+</li>
+<li><code>components/breadcrumbs</code></li>
+<li><code>components/footer</code></li>
+<li><code>components/header</code></li>
+<li><code>components/page</code></li>
+<li><code>components/shop</code></li>
+<li>
+<p><code>components/shoppingcart</code></p>
+<ul>
+<li><code>shoppingcart.js</code></li>
+<li><code>shoppingcart.model.js</code> - <em>only important for Frontend Heroes</em></li>
+<li><code>shoppingcart.model.test.js</code> - <em>only important for Frontend Heroes</em></li>
+<li><code>shoppingcart.scss</code></li>
+</ul>
+</li>
+<li><code>libs-polyfills</code> - place external JavaScript (e.g. jQuery) or CSS/SCSS libraries in here</li>
+</ul>
+<p>Feel free to adapt everything except for <code>shoppingcart.model.test.js</code>.</p>
+<h3 id="coding-guidelines">Coding guidelines</h3>
+<ol>
+<li>
+<p>HTML markup</p>
+<p>Make sure the document contains semantically correct HTML5 markup <a href="http://html5doctor.com/lets-talk-about-semantics/">[help]</a>.</p>
+</li>
+<li>
+<p>Accessibility</p>
+<ul>
+<li>fully functional with keyboard</li>
+<li>tab navigation follows a logical flow</li>
+<li>use buttons where buttons are needed <a href="https://medium.com/shopify-ux/semantic-html-the-unbearable-rightness-of-being-9b3c493e1791">[help]</a></li>
+<li>correct usage of ARIA landmark roles [<a href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">help</a>]</li>
+</ul>
+</li>
+<li>
+<p>CSS</p>
+<ul>
+<li>We kindly ask you to use SASS.</li>
+<li>Your CSS should be markup independent. E.g. no class names as <code>.h1</code> or <code>.table</code>.</li>
+<li>Your SASS code should be split into modules. Use the prepared folder structure <code>src/components/*</code> and add into each component a new <code>.scss</code> file with the component's name. E.g. within <code>src/components/breadcrumbs</code> you want to add <code>breadcrumbs.scss</code>.</li>
+<li>make sure your selectors have a low specificity <a href="https://medium.com/@dte/understanding-css-selector-specificity-a02238a02a59">[help]</a></li>
+<li>Twitter Bootstrap or similar component frameworks are not allowed, however utility libraries such as <a href="https://www.npmjs.com/package/breakpoint-sass">breakpoint-sass</a> or <a href="https://github.com/postcss/postcss">PostCSS + plugins</a> can be used</li>
+<li>avoid <strong>deeply</strong> nested selectors for more modular CSS [<a href="http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css">help</a> and [<a href="http://thesassway.com/advanced/modular-css-an-example#striking-a-balance">help</a>]</li>
+</ul>
+</li>
+<li>
+<p>JavaScript</p>
+<ul>
+<li>jQuery is allowed (or other libraries that might help you with DOM manipulation), but <em>no frameworks</em></li>
+<li>avoid generating completely new HTML structures from within JavaScript</li>
+</ul>
+</li>
+</ol>
+<h3 id="can-i-use-additional-npm-packages">Can I use additional NPM packages?</h3>
+<p>Yes, as long as the points from the above section <a href="#coding-guidelines">Coding guidelines</a> are not violated.</p>
+<h2 id="requirements">Requirements</h2>
+<h3 id="junior-developers-and-frontend-heroes">Junior Developers <em>and</em> Frontend Heroes</h3>
+<ol>
+<li>
+<p>HTML markup</p>
+<p>Lucky you! Most of it is already prepared. However, probably you will have to add new markup to achieve the required design.</p>
+</li>
+<li>
+<p>Dynamic behavior</p>
+<ul>
+<li>initially only the shop with its items is shown; the shopping cart form is hidden</li>
+<li>the shopping cart form will become visible once the first shop item was added; however it will also become invisible, when there's no item in the shopping cart; at the same time the "empty shopping cart" disappears</li>
+<li>when the user clicked on the <code>Add to cart</code> button, the according shop item is added to the cart or the quantity of an already listed item is increased</li>
+<li>clicking on the <code>Remove</code> button should remove the according item from the shopping cart</li>
+<li>clicking on the <code>+</code> and <code>-</code> quantity buttons should change all relevant numbers</li>
+<li>clicking on the "Proceed to Checkout" button will make it inactive and replace its label with "Sending your order..."</li>
+</ul>
+</li>
+<li>
+<p>The title image (<code>src/themes/netcentric/title.*.jpg</code>) changes according to the pixel density and viewport width. For <code>2dppx</code> use the one that carries <code>2x</code> in its name.</p>
+</li>
+<li>
+<p>The website should look the same in the required browsers.</p>
+</li>
+</ol>
+<h3 id="only-junior-developers"><em>Only</em> Junior Developers</h3>
+<ol start="5">
+<li>Please make it look like <a href="design/small_viewport.png">small_viewport.png</a> using the provided measurements (<a href="design/small_viewport_measurements.png">small viewport</a> and referenced <a href="design/large_viewport_measurements.png">large viewport</a>).</li>
+</ol>
+<p>Reminder: We expect semantically correct HTML5 and markup independent CSS.</p>
+<ol start="6">
+<li>
+<p>Bonus - <em>We will only take that into consideration when all of the above points work as expected.</em></p>
+<ul>
+<li>Create a parallax effect on the title image [<a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/#update-25-feb-2015">help</a>].</li>
+</ul>
+</li>
+</ol>
+<h3 id="only-frontend-heroes"><em>Only</em> Frontend Heroes</h3>
+<ol start="5">
+<li>
+<p>Leave an empty file named "I AM A FRONTEND HERO" in the root folder.</p>
+</li>
+<li>
+<p>Configuration</p>
+<ul>
+<li>Remove <code>/* eslint-disable */</code> from the top of the file <code>components/shoppingcart/shoppingcart.model.js</code></li>
+<li>add within the <code>.eslintrc</code> file to the <code>rules</code> property <code>"complexity": ["error", 4]</code></li>
+<li>add to the script task <code>build</code> the task <code>test</code> so ends up looking like <code>"build": "npm-run-all lint css test"</code></li>
+</ul>
+</li>
+<li>
+<p>JavaScript</p>
+<ul>
+<li>Write your code in <code>components/shoppingcart/shoppingcart.model.js</code> so that at least 10 tests of the test suite in <code>components/shoppingcart/shoppingcart.model.test.js</code> pass (<a href="design/test-ideal-outcome.png">test-ideal-outcome.png</a>).</li>
+<li>The rest of the code you need to interact with the DOM should be placed in <code>components/shoppingcart/shoppingcart.js</code>.</li>
+<li>Run the test suite with <code>npm run test</code> or <code>npm run watch:test</code>.</li>
+</ul>
+</li>
+<li>
+<p>Please make it look like <a href="design/large_viewport.png">large_viewport.png</a> using the provided <a href="design/large_viewport_measurements.png">measurements</a>. Large viewports start at 800px; the design for smaller viewports remains unstyled.</p>
+</li>
+<li>
+<p>Bonus - <em>We will only take that into consideration when all of the above points work as expected.</em></p>
+<ul>
+<li>Add new tasks to minify the HTML, CSS and JavaScript files and put the result in a <code>dist</code> folder at the root level. It should also clean the <code>dist</code> folder before each run. Make sure the above happens as part of the <code>build</code> task.</li>
+</ul>
+</li>
+</ol>
+<h2 id="what-are-you-expected-to-hand-in">What are you expected to hand in?</h2>
+<p>Please remember, when running <code>npm run build</code> there should be <em>no errors</em>. Take your time to make it work.</p>
+<p>Finally, prepare a zip archive with your solution which you send back as an email to the human resource employee you are in contact with and tell her/him if you ultimately applied as a Junior Frontend Developer or as a Frontend Hero. <em>PLEASE DO NOT INCLUDE THE <code>node_modules</code> folder</em>.</p>
+<p>Good luck :-)</p>
+
+  </main>
+  <footer class="pageFooter">
+    <a class="homepageLink" href="http://netcentric.biz">Link to Netcentric Homepage</a>
+  </footer>
+</body>
+</html>

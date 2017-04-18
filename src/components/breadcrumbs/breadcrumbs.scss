@@ -1,0 +1,43 @@
+#section-breadcrumbs {
+	list-style: none;
+	padding: 0;
+	@include flex-justify-between;
+
+	li {
+		border: dashed 1px $c-secondary-darker;
+		display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+		width: 49%;
+
+		.breadcrumbs-title {
+			h3 {
+				font-weight: $font-weight-bold;
+				margin: 0;
+			}
+
+			p {
+				margin: $vertical-rythm-spacing-text 0;
+				min-height: 75px;
+			}
+		}
+
+		.breadcrumbs-footer {
+			@include flex-justify-between;
+
+			button {
+				@include text-button;
+
+				&:focus {
+					outline: -webkit-focus-ring-color auto 5px;
+				}
+			}
+
+			p {
+				font-weight: $font-weight-bold;
+				margin: 0;
+			}
+		}
+	}
+
+}
