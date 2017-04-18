@@ -7,6 +7,12 @@
 
     function showCart() {
       $("#section-shoppingcart").show();
+      $("#proceed")[0].addEventListener('click', proceed, false);
+    };
+
+    function proceed() {
+      $("#proceed")[0].innerText = 'Sending your order...';
+      $("#proceed")[0].disabled = true;
     };
 
     function templateProduct(product) {
@@ -94,12 +100,22 @@
       }
     };
 
-    function changeMinusProductQuantity() {
-      var products = $("#shopping-list tr td.info h3");
+    function changeMinusProductQuantity(index) {
+      var context = this.parentElement.parentElement.parentElement;
+      var quantity = parseInt(context.lastElementChild.firstElementChild.value);
+      if(quantity > 0) {
+        context.lastElementChild.firstElementChild.value = quantity - 1;
+        calculateTotal();
+      } 
     };
 
     function changePlusProductQuantity() {
-
+      var context = this.parentElement.parentElement.parentElement;
+      var quantity = parseInt(context.lastElementChild.firstElementChild.value);
+      if(quantity > 0) {
+        context.lastElementChild.firstElementChild.value = quantity + 1;
+        calculateTotal();
+      } 
     };
 
     function addEvenListener() {
