@@ -310,13 +310,13 @@ header nav ul li a {
   padding: 10px 0 0;
 }
 
-#section-shoppingcart #shoppingcart-form table tfoot ol .total {
+#section-shoppingcart #shoppingcart-form table tfoot ol #total {
   border-top: 1px solid #cccccc;
   margin-top: 10px;
   padding-top: 16px;
 }
 
-#section-shoppingcart #shoppingcart-form table tfoot ol .total output {
+#section-shoppingcart #shoppingcart-form table tfoot ol #total output {
   color: #311b92;
   font-size: 22px;
   font-weight: 400;
