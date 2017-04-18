@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1492474028238" clover="3.2.0">
-  <project timestamp="1492474028238" name="All files">
+<coverage generated="1492503989488" clover="3.2.0">
+  <project timestamp="1492503989488" name="All files">
     <metrics statements="57" coveredstatements="53" conditionals="18" coveredconditionals="15" methods="16" coveredmethods="16" elements="91" coveredelements="84" complexity="0" loc="57" ncloc="57" packages="1" files="1" classes="1">
       <file name="shoppingcart.model.js" path="/Users/titoagudelo/Workspace/shopping/src/components/shoppingcart/shoppingcart.model.js">
         <metrics statements="57" coveredstatements="53" conditionals="18" coveredconditionals="15" methods="16" coveredmethods="16"/>

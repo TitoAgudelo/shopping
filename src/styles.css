@@ -227,6 +227,11 @@ header nav ul li a {
   color: #311b92;
   font-size: 25px;
   font-weight: 300;
+  text-align: right;
+}
+
+#section-shoppingcart #shoppingcart-form table thead tr th:first-child {
+  text-align: left;
 }
 
 #section-shoppingcart #shoppingcart-form table tbody {
@@ -302,6 +307,10 @@ header nav ul li a {
 
 #section-shoppingcart #shoppingcart-form table tbody tr td.items button:hover, #section-shoppingcart #shoppingcart-form table tbody tr td.items button:focus {
   background: #7b64e2;
+}
+
+#section-shoppingcart #shoppingcart-form table tfoot td {
+  text-align: right;
 }
 
 #section-shoppingcart #shoppingcart-form table tfoot ol {

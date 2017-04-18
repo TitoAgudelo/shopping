@@ -14,7 +14,7 @@
         },
         products: []
       };
-    };
+    }
 
     _getCart = function() {
       if(window.myCar) {
@@ -22,34 +22,34 @@
       } else {
         return _getDefaultCart();
       }
-    };
+    }
 
     _calculateTotal = function(cart) {
       var beforeVAT = 0;
-      var afterVAT = 0;
       var vatRate = cart.total.VATRate ? cart.total.VATRate : 0;
 
-      cart.products.forEach(function(value, key) {
+      cart.products.forEach(function(value) {
         beforeVAT = beforeVAT + (value.price * value.quantity);
       });
       cart.total.beforeVAT = beforeVAT;
       cart.total.afterVAT = (beforeVAT / 100) * vatRate + beforeVAT;
       cart.total.VAT = (beforeVAT / 100) * vatRate;
       return cart;
-    };
+    }
 
     _setProduct = function(product) {
       product.price = product.price ? product.price : 0;
       product.quantity = product.quantity ? product.quantity : 1;
       var index = window.myCar.products.indexOf(product);
       if(index >= 0) {
-        window.myCar.products[index].quantity = window.myCar.products[index].quantity + product.quantity;
+        window.myCar.products[index].quantity = 
+        window.myCar.products[index].quantity + product.quantity;
       } else {
         window.myCar.products.push(product);
       }
       window.myCar = _calculateTotal(window.myCar);
       return window.myCar;
-    };
+    }
 
     _changeProductQuantity = function(product, newQuantity) {
       var index = window.myCar.products.indexOf(product);
@@ -61,10 +61,10 @@
         window.myCar.products.push(product)
       }
       return _calculateTotal(window.myCar);
-    };
+    }
 
     _removeProducts = function(productsToDelete) {
-      productsToDelete.forEach(function(value, key) {
+      productsToDelete.forEach(function(value) {
         window.myCar.products = window.myCar.products.filter(function(el) {
           return el.name !== value.name;
         });
@@ -74,7 +74,7 @@
         return window.myCar;
       }
       return _calculateTotal(window.myCar);
-    };   
+    }  
 
     return {
       init: function(initialState) {
@@ -105,5 +105,5 @@
         return window.myCar;
       },
     };
-  };
+  }
 })();

@@ -33,6 +33,11 @@
 						color: $c-primary;
 						font-size: $font-size-table-header;
 						font-weight: $font-weight-regular;
+						text-align: right;
+
+						&:first-child {
+							text-align: left;
+						}
 					}
 				}
 			}
@@ -88,6 +93,10 @@
 			}
 
 			tfoot {
+				td {
+					text-align: right;
+				}
+				
 				ol {
 					border-top: 1px solid $c-secondary-darker;
 					list-style: none;
